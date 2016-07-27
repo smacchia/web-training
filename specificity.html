@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Specificity</title>
+    <!-- CSS is here just for learning, it would normally be separate -->
+    <style type="text/css">
+        body { color: red; }
+        ul {color: blue;}
+        li {color: orange;}
+        .highlight { color: violet; }
+        #special {color: gray;}
+    </style>
+
+    <!-- Order of specificity:
+        /* Type selectors */
+        li {}
+        li a {} /* chaining */
+        li + a {}  /* sibling */
+
+        /* Class, attributie, & pseudo-class selectors */
+        .hello {}
+        input[type="text"] {}
+        a:hover /* pseudo class selector */
+        input: checked  /* ditto */
+
+        /* Id Selectors */
+        #special {}
+
+
+    -->
+</head>
+<body>
+
+<p>HELLO!</p>
+
+<ul>
+Just some text
+    <!-- Id wins here -->
+    <li id="special" class=highlight>John</li>
+    <li>Paul</li>
+    <li>George</li>
+    <li class="highlight">Ringo</li>
+</ul>
+
+</body>
+</html>

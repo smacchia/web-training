@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms</title>
+</head>
+<body>
+
+<!-- action - where the form sends the data to -->
+<!-- method - what method (get/post); get is default -->
+<!-- required keyword is a boolean attribute -->
+<!-- <form action="http://www.wikipedia.com" method="post"> -->
+<form>
+ <!--
+    <label>
+        Username:
+        <input name="username" type="text" placeholder="username">
+    </label>
+    <label>
+        Password:
+        <input name="password" type="password" placeholder="password">
+    </label>
+    <input type="submit">
+ -->
+    <label for="email">Email:</label>
+    <input id="email" type="email" placeholder="email" required>
+    <label for="password">Password:</label>
+    <input id="password" type="password" placeholder="password" required>
+    <input type="submit">
+</form>
+
+</body>
+</html>

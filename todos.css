@@ -1,0 +1,19 @@
+/*element*/
+li {
+    border: 2px solid red;
+}
+
+/*id*/
+#ordermilk {
+    background: steelblue;
+}
+
+/*class*/
+.everyother {
+    background: pink;
+}
+
+/*class*/
+.done {
+    text-decoration: line-through;
+}

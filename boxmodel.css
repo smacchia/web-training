@@ -1,0 +1,22 @@
+p {
+    /*content - width and height*/
+    /*width: 200px;*/
+    width: 50%; /* of the body, which is the parent in this case */
+
+    /*border*/
+    border: 2px solid blue;
+
+    /*padding*/
+    /*padding: 10px; */
+    padding-left: 40px;
+
+
+    /*margin*/
+    /*margin: 100px;*/
+    /* margin: 20px 40px 500px 100px; *//* top, right, bottom, left */
+    /* margin: 0 auto 0 auto; *//* centers horizontally */
+    /* OR, 0 or #px is top and bottom, auto is for left/right */
+    margin: 0 auto;
+    /*Another shortcut: top/bottom, left/right;*/
+    margin: 50px 20px;
+}

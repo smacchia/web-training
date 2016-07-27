@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inputs</title>
+</head>
+<body>
+
+<!-- Both inputs have the same name which makes them mutually exclusive -->
+<p>Do you prefer cats or dogs?</p>
+<form>
+<label for="dogs">Dogs</label>
+<input id="dogs" type="radio" name="petChoice" value="DOGS">
+<label for="cats">Cats</label>
+<input id="cats" type="radio" name="petChoice" value="CATS">
+
+<p>What's your current mood?</p>
+<select name="mood">
+    <option value="happy">:)</option>
+    <option value="neutral">:|</option>
+    <option value="sad">:(</option>
+</select>
+
+<p>Brief description:</p>
+<textarea name="description" rows="10" cols="15"></textarea>
+<br>
+
+<!-- If button is at the end, then it will submit -->
+<button>Go!</button>
+</form>
+
+</body>
+</html>

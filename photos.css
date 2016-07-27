@@ -1,0 +1,18 @@
+img {
+    width: 30%;
+    /* takes elements out of the normal flow and float them to the left */
+    float: left;
+    margin: 1.66%;
+}
+
+p { 
+    font-family: Raleway;
+    margin-left: 1.66%;
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: lowercase;
+    border-bottom: 2px solid  #cccccc;
+    width: 30%;
+    padding-bottom: 20px;
+}
+

@@ -1,0 +1,68 @@
+/** font family and size */
+
+/* standard fonts */
+/* must have quotes if there is a pointsize */
+/*p {
+    font-family: "Arial";
+}
+
+h1 {
+    font-family: Calibri
+}
+*/
+/** google fonts - got to google.com/fonts and choose them to use - put the link in the html and use them here. */
+
+h1 {
+    font-family: Indie Flower
+}
+p { 
+    font-family: Raleway
+}
+
+h1 {
+    /*font-size: 50pt;*/
+    /*font-size: 50px;*/
+    font-size: 5.0em;
+}
+
+body {
+    font-size: 10px;
+}
+
+span {
+    font-size: 2.0em; /* double the font size of the enclosing element */
+}
+
+p {
+    /*font-size: 40px;*/
+    font-size: 2.0em;
+}
+
+/** font weight; normal, bold, italic or 100-800 (100, 200 etc.) */
+
+p {
+    font-weight: normal;
+}
+
+/** line height */
+p {
+    line-height: 1.5;
+}
+
+/** text align */
+h1 {
+    text-align: right;
+}
+
+p {
+    text-align: center;
+}
+
+/** text decoration */
+p {
+    text-decoration: underline;
+}
+
+h1 {
+    text-decoration: line-through;
+}
