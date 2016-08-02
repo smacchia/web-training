@@ -1,0 +1,11 @@
+NOTES:
+
+Always falsy:
+    false
+    0
+    ""
+    null
+    undefined
+    NaN
+
+Everything else is Truthy
