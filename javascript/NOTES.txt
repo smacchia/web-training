@@ -9,3 +9,14 @@ Always falsy:
     NaN
 
 Everything else is Truthy
+
+ARRAYs
+    push/pop add to add/remove at the end of the array
+    shift/unshift remove/add to the beginning of the array
+
+    nexted arrays:
+    var foo = [
+        [1, 2, 3].
+        [4, 5, 6],
+        [7, 8, 10]
+    ]
