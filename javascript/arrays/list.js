@@ -8,6 +8,7 @@ var cmd;
 var todoList = ["Learn", "Teach", "Clean"];
 
 while (cmd !== quit) {
+    len = todoList.length;
     cmd = prompt("What would you like to do?");
     if (cmd === add) {
         addTodo();
@@ -20,7 +21,6 @@ while (cmd !== quit) {
     }
 }
 console.log("You quit the app");
-
 
 function addTodo() {
     var todo = prompt("Enter a new todo:");
