@@ -1,0 +1,25 @@
+// 4+ ways to select the first paragraph
+var paragraph = document.querySelector("p");
+console.log("document.querySelector('p')");
+console.log(paragraph);
+paragraph = document.getElementById("first");
+console.log("document.getElementById('first')");
+console.log(paragraph);
+paragraph = document.getElementsByClassName("special")[0];
+console.log("document.getElementsByClassName('special')[0]");
+console.log(paragraph);
+paragraph = document.getElementsByTagName("p")[0];
+console.log("document.getElementsByTagName('p')[0]");
+console.log(paragraph);
+paragraph = document.querySelector(".special");
+console.log("document.querySelector('.special')");
+console.log(paragraph);
+paragraph = document.querySelectorAll(".special")[0];
+console.log("document.querySelectorAll('.special')[0]");
+console.log(paragraph);
+paragraph = document.querySelector("#first");
+console.log("document.querySelector('#first')");
+console.log(paragraph);
+paragraph = document.querySelector("h1 + p");
+console.log("document.querySelector('h1 + p')");
+console.log(paragraph);

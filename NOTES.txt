@@ -33,5 +33,16 @@ DOM
         document.getElementById()
         document.getElementsByClassName()
         document.getElementsByTagName()
-        document.quierySelector()
+        document.querySelector()
         document.querySelectorForAll()
+
+Manipulating elements using CSS:
+    tag = document.querySelector("<whatever>")
+    // Add a class to the selected element
+    tag.classList.add("<class in css>")
+
+    // remove a class from the selected element
+    tag.classList.remove("<class in css that was added>")
+
+    // toggle a class off and on
+    tag.classList.toggle("<class in css>")
