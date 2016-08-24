@@ -25,3 +25,13 @@ Resources/libraries:
     underscorejs
         Has manu useful objects
         Everything starts with "_"
+
+DOM
+    To see dom structure in console type: console.dir(document)
+
+    5 important document methods:
+        document.getElementById()
+        document.getElementsByClassName()
+        document.getElementsByTagName()
+        document.quierySelector()
+        document.querySelectorForAll()
