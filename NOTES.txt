@@ -46,3 +46,14 @@ Manipulating elements using CSS:
 
     // toggle a class off and on
     tag.classList.toggle("<class in css>")
+
+Code along for changing all links in a document:
+    var links = document.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+         var href = links[i].getAttribute("href");
+         console.log(href);
+         if (href != null) {
+              links[i].setAttribute("href", "http://www.sbmgarden.com");
+         }
+    }
+
