@@ -80,9 +80,7 @@ if (playtoValue != NaN) {
         // })
         // OR If the game is over, reset
         reset();
-});
-
-    document.getElementById("reset").addEventListener("click", reset);
+    });
 
     function reset() {
         players.forEach(function(player) {
