@@ -1,6 +1,10 @@
 var goalColor;
+var colors = [];
 var goalText = document.getElementById("goal-color");
 var message = document.querySelector("#message");
+var squares = document.getElementsByClassName("square");
+const MAX_SQUARES = squares.length;
+var numSquares = MAX_SQUARES;
 
 var easyButton = document.getElementById("easy");
 easyButton.addEventListener("click", function() {
@@ -17,31 +21,15 @@ resetButton.addEventListener("click", function() {
     reset(numSquares);
 });
 
-var squares = document.getElementsByClassName("square");
-const MAX_SQUARES = squares.length;
-var numSquares = MAX_SQUARES;
-var colors = [];
+init();
 
-if (squares == null || squares == undefined || squares.length < numSquares) {
-    alert("PROGRAMMING ERROR: there are not enough squraes in the html!");
-} else {
-    reset();
-    setupSquareActions();
-    setupButtonActions();
-}
-
-function setupButtonActions() {
-    var buttons = document.querySelectorAll("button");
-    for (var i = 0; i < buttons.length; i++) {
-        var button = buttons[i];
-        if (button.id !== "reset") {
-            button.addEventListener("mouseover", function() {
-                this.classlist.add("hover");
-            });
-            button.addEventListener("mouseout", function() {
-                this.classlist.remove("hover");
-            });
-        }
+function init() {
+    if (squares == null || squares == undefined || squares.length < numSquares) {
+        alert("PROGRAMMING ERROR: there are not enough squraes in the html!");
+    } else {
+        reset();
+        setupSquareActions();
+        setupButtonActions();
     }
 }
 
@@ -112,19 +100,12 @@ function setLevel(max, buttonToSet, buttonToClear) {
     buttonToSet.classList.add("selected-level");
     buttonToClear.classList.remove("selected-level");
     numSquares = max;
-    for (var i = max; i < squares.length; i++) {
-        squares[i].style.backgroundColor = "transparent";
-        // Can use the display of "block" for on and "none" for off
-        // but that would require us to check the max and loop with
-        // more complex logic.
-        // squares[i].style.display = "none";
-        squares[i].classList.add("body-color");
-    }
+    hideSquares(0);
     reset();
 }
 
-function hideUnusedSquares() {
-    for (var i = numSquares; i < squares.length; i++) {
+function hideSquares(start) {
+    for (var i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = "transparent";
         // Can use the display of "block" for on and "none" for off
         // but that would require us to check the max and loop with
@@ -132,5 +113,4 @@ function hideUnusedSquares() {
         // squares[i].style.display = "none";
         squares[i].classList.add("body-color");
     }
-
 }
