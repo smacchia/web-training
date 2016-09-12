@@ -23,7 +23,6 @@ body {
 
 #colors {
     max-width: 600px;
-    /*margin: 0 auto;*/
     margin: 20px auto;
 }
 
@@ -44,7 +43,7 @@ button {
     outline: none;
 }
 
-/*Doesn't work! */
+/* NOTE! There can't be a space after the : or it won't work */
 button:hover {
     color: white;
     background-color: steelblue;
