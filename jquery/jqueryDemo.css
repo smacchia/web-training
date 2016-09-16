@@ -1,0 +1,6 @@
+img {
+    width: 30%;
+    /* takes elements out of the normal flow and float them to the left */
+    float: left;
+    margin: 1.66%;
+}

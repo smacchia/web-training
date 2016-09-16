@@ -1,5 +1,22 @@
 NOTES:
 
+    <!-- Order of specificity:
+        /* Type selectors */
+        li {}
+        li a {} /* chaining */
+        li + a {}  /* sibling */
+
+        /* Class, attributie, & pseudo-class selectors */
+        .hello {}
+        input[type="text"] {}
+        a:hover /* pseudo class selector */
+        input: checked  /* ditto */
+
+        /* Id Selectors */
+        #special {}
+
+
+    -->
 Always falsy:
     false
     0
@@ -57,3 +74,7 @@ Code along for changing all links in a document:
          }
     }
 
+
+JQUERY
+    google: 
+        cdn jquery
