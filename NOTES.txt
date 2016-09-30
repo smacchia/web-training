@@ -77,4 +77,28 @@ Code along for changing all links in a document:
 
 JQUERY
     google: 
-        cdn jquery
+        cdn jquery 
+            to find the various versions
+        $ is jquery and used to select, instead of document.get*
+            replaces all, and works like querySelectorAll, and always returns a list
+        .css(property, value) appended to $("<whatever>") to change the 
+            $("h1").css("color", "green") 
+                OR
+            document.querySelector("h1").style.color = "green"
+
+            .css is more powerful; can pass in an object of styles
+                can style multiple elements at once, since $() returns a list and then .css(styles) applies to all of them.
+
+            can use a psuedo selector, like "div:first" or "div:first-of-type"
+
+        .text
+            like textContent in regular js
+        .html
+            inner html, retreive and set (groups of items)
+            Can't use text() to change html
+        .attr()
+            short for attribute, retrieves value of an attribute, or set an attribute
+        .val()
+            Any kind of input or menu.
+            get/set the current value (wrapper for js .value)
+
