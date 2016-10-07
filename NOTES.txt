@@ -101,4 +101,35 @@ JQUERY
         .val()
             Any kind of input or menu.
             get/set the current value (wrapper for js .value)
+        .addClass/.removeClass
+            Add/remove classes to any element. Input is a single class or multiple like:
+                "class1 class2", etc.
+        .toggleClass
+            Add/remove classes to an element based on whether it's present or not.
+
+        EVENTS
+            Most widely used events are
+                click()
+                    $("#submit").click(function() {...});
+                    // Adds a click listener to the SINGLE element with an id of 'submit'
+                    $('button').click(function() {});
+                    // Adds a click listenter when ANY button is clicked
+                keypress() // for input type elements
+                    function will get an event
+                on() 
+                    // used the most; similar to addEventListener and takes the name of the 
+                    // event.
+                    // on() can be used instead of the others
+                    // on() automatically adds the click listeners to future elements
+                    // of the same type/class - this is useful for things like a todo list.
+
+                Inside the callback, use $(this), the jQuery wrapper to access 'this'
+
+                keydown/up gives what keys were pressed, keypress gives the character
+
+        Effects/Animations
+            fading
+                fadeIn/Out/Toggle
+
+            slides
 

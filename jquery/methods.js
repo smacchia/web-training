@@ -28,3 +28,6 @@ $("img").last().attr("src", img2);
 console.log($("input").val());
 console.log($("select").val());
 
+$('h1').addClass("correct");
+//$('h1').removeClass("correct");
+$("li").first().toggleClass("done")
