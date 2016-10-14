@@ -132,4 +132,5 @@ JQUERY
                 fadeIn/Out/Toggle
 
             slides
+                slideIn/Out/Toggle
 
