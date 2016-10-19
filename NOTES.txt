@@ -134,3 +134,17 @@ JQUERY
             slides
                 slideIn/Out/Toggle
 
+BACK-END
+========
+Node js console
+    way to look at the javascript; no UI for this.
+
+    REPL - Read, evaluate, print loop
+
+    No document, alert, or any of that since that's client side
+
+    With node, js can be executed by using the node command
+        node <filename>
+NPM
+    All packages installed inside node_modules
+    require() used to import it.
