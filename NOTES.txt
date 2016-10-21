@@ -148,3 +148,18 @@ Node js console
 NPM
     All packages installed inside node_modules
     require() used to import it.
+
+    package.json - all npm packages have this file
+        json -> javascript object noation
+    
+    node_modules is not part of the git source, npm creates it and everything
+    in the json that says what are the dependencies
+
+    npm init creates a package.json for us and walks through creating the package.json
+
+    --save
+        Takes the package name and version and saves it into the package.json
+
+ROUTES in javascript
+    * global url
+    route parameters are created by prefixing with :
