@@ -160,6 +160,48 @@ NPM
     --save
         Takes the package name and version and saves it into the package.json
 
+    Initializing projects:
+        npm init
+        npm install <package> --save 
+            <repeat>
+
+EXPRESS light wt web framework
 ROUTES in javascript
     * global url
-    route parameters are created by prefixing with :
+    route parameters are created by prefixing with ':'
+
+    Rendering HTML & Templates
+    --------------------------
+        Most files are dynamic instead of plain html/css
+
+        EJS - embedded javascript (logic inside html)
+        Express looks for ejs files in the "views" directory; needs the ejs package for this
+        Plain EJS files that only contain html, is very static.
+
+        Let's us embed javascript inside html:
+            <%= %> 
+                Performs evaluation of something to be added to html
+            <% %>
+                Just logic where stuff is not to be added to the html
+
+            embed javascript inside here in the html and ejs will treat it as js.
+
+            This allows content to be dynamic based on backend data.
+
+        Styles & Partials
+            Can use embedded stylesheet in ejs, but this isn't the best. Better to use an 
+            external stylesheet. 
+
+            Usually put .css files in public
+
+            Anything but views directory need to be told to express via use():
+                app.use(express.static("public"));
+
+            Also, the render method needs the ejs file to be <file>.ejs UNLESS we tell
+            express what the view engine is, then the .ejs can be omitted:
+                app.set("view engine", "ejs")
+
+            Partials are files that can be included in other files
+
+    Post requests
+    

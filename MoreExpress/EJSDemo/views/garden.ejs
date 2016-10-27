@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+<h1>Gardening with: <%= plantVar.toUpperCase() %></h1>
+
+<!-- Don't need equal after percent cuz just want to run the code -->
+<% if (plantVar.toLowerCase() === "roses") { %>
+    <p>Good Choice! Roses are lovely!</p>
+<% } else {%>
+    <p>This choice is a good one too...</p>
+<% } %>
+
+<p>P.S. This is the garden.ejs file</p>
+
+<% include partials/footer %>
