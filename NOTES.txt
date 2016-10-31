@@ -204,4 +204,6 @@ ROUTES in javascript
             Partials are files that can be included in other files
 
     Post requests
+        See example in MoreExpress/PostRequestDemo
+
     

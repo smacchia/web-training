@@ -1,0 +1,11 @@
+<h1>Movie Results</h1>
+
+<ul>
+    <% data["Search"].forEach(function(movie) { %>
+        <li>
+            <strong><%= movie["Title"] %> </strong> <i><%= movie["Year"] %></i>
+        </li>
+    <% }) %>
+</ul>
+
+<a href="/">Search Again</a>
