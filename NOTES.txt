@@ -204,8 +204,9 @@ ROUTES in javascript
             Partials are files that can be included in other files
 
     Post requests
-    
+        See example in MoreExpress/PostRequestDemo
 
+    
     APIs
         JSON - javascript object notation
             different in that you need quotes around keys
