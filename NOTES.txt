@@ -284,5 +284,3 @@ ROUTES in javascript
             NEW      /somethings/new  GET     Displays form to make a new <somethings>
             CREATE   /somethings      POST    Add a new <something> to DB
             SHOW     /somethings/:id  GET     Shows info about 1 <something>
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
