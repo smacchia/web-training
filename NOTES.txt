@@ -206,4 +206,5 @@ ROUTES in javascript
     Post requests
         See example in MoreExpress/PostRequestDemo
 
-    
+    Databases
+        MongoDB, OO/JSON db, popular when paired with express and angular. Called the MEAN stack (Mongo, Express, Angular, Node).
