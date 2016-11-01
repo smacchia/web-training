@@ -236,4 +236,22 @@ ROUTES in javascript
 
                             db.dogs.remove({breed: "dog"}).limit(1)
                                 Remove only the first one of this kind found.
+                show dbs
+                    Shows all the databases
+                use <db>
+                    Switches the current db to the input one
+                show collections
+                    Shows all the collections in the db
+                db.<collection>.drop()
+                    deletes all the data in a collection
+
         Mongoosejs.com - mongo db object modeling for node.js
+
+        RESTFUL ROUTES
+
+            name      url            verb    description
+            ========================================
+            INDEX    /somethings      GET     display a list of all <somethings>
+            NEW      /somethings/new  GET     Displays form to make a new <somethings>
+            CREATE   /somethings      POST    Add a new <something> to DB
+            SHOW     /somethings/:id  GET     Shows info about 1 <something>
