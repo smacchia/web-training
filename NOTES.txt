@@ -205,3 +205,15 @@ ROUTES in javascript
 
     Post requests
     
+
+    APIs
+        JSON - javascript object notation
+            different in that you need quotes around keys
+
+        curl is used to create http requests at the command line
+
+        Simple to use for first exercise is github.com/request/request
+
+        Json queries return a string and need to use JSON.parse to turn it
+        into an object with keys that are strings of the elements in the
+        json
