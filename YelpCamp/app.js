@@ -70,14 +70,13 @@ app.post("/campgrounds", function(req, res) {
 app.get("/campgrounds/:id", function(req, res) {
     Campground.findById(
         req.params.id, 
-        function(error, found) {
+        function(error, foundCampground) {
             if (error) {
                 console.log(error);
             } else {
-                res.render("show", {which: found});
+                res.render("show", {campground: foundCampground});
             }
         });
-    res.render("show");
 })
 
 app.listen(3000, function() {
