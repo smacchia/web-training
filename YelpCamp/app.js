@@ -53,7 +53,8 @@ app.post("/campgrounds", function(req, res) {
     Campground.create(
         {
             name: req.body.name, 
-            image: req.body.image
+            image: req.body.image,
+            description: req.body.description
         }, 
         function(error, campground) {
             if (error) {
