@@ -1,0 +1,37 @@
+<% include partials/header %>
+
+<div class="ui main text container segment">
+    <div class ="ui huge header">Update/Edit <%=blog.title%></div>
+
+    <!-- Forms don't support PUT requests, so we can't use a method of PUT -->
+    <!-- Defaults to a get request! -->
+    <!-- Must use method-override -->
+    <!-- <form class="ui form" action="/blogs/<%=blog._id%>" method="PUT"> -->
+    <form class="ui form" action="/blogs/<%=blog._id%>?_method=PUT" method="POST">
+        <!-- NOTE: the name here allows express to create an objecg -->
+        <!-- of all 3 pieces (req.body.blog) -->
+        <div class="field">
+            <label>Title</label>
+            <input 
+                type="text" 
+                name="blog[title]" 
+                value="<%=blog.title%>">
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input 
+                type="text" 
+                name="blog[image]"
+                value=<%=blog.image%>>
+        </div>
+        <br>
+        <div class="field">
+            <label>Blog Content</label>
+            <textarea name="blog[body]"><%=blog.body%></textarea>
+        </div>
+        <input class="ui purple basic button big" type="submit">
+    </form>
+</div>
+
+
+<% include partials/footer %>

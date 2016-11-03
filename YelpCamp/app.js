@@ -32,12 +32,12 @@ app.get("/campgrounds/new", function(req,res) {
 
 // INDEX route - show list of campgrounds
 app.get("/campgrounds", function(req, res) {
-    // remember, first variable is the name, second is the data from the array
-    // res.render("campgrounds", {campgrounds: campgrounds});
     Campground.find({}, function(error, allCampgrounds) {
         if (error) {
             console.log(error);
         } else {
+            // remember, first variable is the name, second is the data 
+            // from the array
             res.render("index", {campgrounds: allCampgrounds});
         }
     })
