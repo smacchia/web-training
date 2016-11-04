@@ -293,3 +293,8 @@ REST - mapping between http routes and CRUD
     Read
     Update
     Destroy
+
+Nesting routes:
+    for instance adding something new to a detail/show route:
+        NEW skiarea/:id/comments/new
+        CREATE skiarea/:id/comments
