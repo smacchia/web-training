@@ -1,5 +1,6 @@
 var mongoose = require("mongoose");
-var Campground = require("./models/campground");
+var SkiArea = require("./models/skiarea");
+var Comment = require("./models/comment");
 
 var seedData = [
     {
@@ -20,7 +21,7 @@ var seedData = [
 ];
 
 function seedDB() {
-    Campground.remove({}, function(err) {
+    SkiArea.remove({}, function(err) {
         if (err) {
             console.log(err);
             return;
@@ -28,13 +29,29 @@ function seedDB() {
 
         console.log("Clean out database for seeding...");
 
-        // add a few campgrounds
+        // add a few skiareas
         seedData.forEach(function(seed) {
-            Campground.create(seed, function(err, data) {
+            SkiArea.create(seed, function(err, skiarea) {
                 if (err) {
                     console.log(err);
                 } else {
                     console.log("Added a ski area");
+                    // create a comment
+                    Comment.create(
+                        {
+                            text: "This place is great! POW POW!",
+                            author: "Susan"
+                        },
+                        function(err, comment) {
+                            if (err) {
+                                console.log(err);
+                            } else {
+                                // associate with the ski area
+                                skiarea.comments.push(comment);
+                                skiarea.save();
+                                console.log("created a new comment.");
+                            }
+                        });
                 }
             });
         })

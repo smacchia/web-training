@@ -1,11 +1,23 @@
 <% include partials/header %>
 
 <div style="margin: auto 20px;" >
-    <h1><%=campground.name%></h1>
+    <h1><%=skiarea.name%></h1>
 
-    <img src=<%=campground.image%>>
+    <img src=<%=skiarea.image%>>
 
-    <p style="margin: 10px 0;"><%= campground.description %></p>
+    <p style="margin: 10px 0;"><%= skiarea.description %></p>
+
+    <h3>Comments</h3>
+    <div style="width: 70% margin-bottom: 20px" class="panel panel-default">
+        <%skiarea.comments.forEach(function(comment) {%>
+            <div class="panel-heading">
+                <p><strong><%=comment.author%></strong></p>
+            </div>
+            <div class="panel-body">
+                <p><%=comment.text%>
+            </div>
+        <%});%>
+    </div>
 </div>
 
 <% include partials/footer %>

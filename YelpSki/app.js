@@ -8,7 +8,7 @@ var express = require("express"),
 seedDB();
 
 // Will make the cat_app db if it's not there already
-mongoose.connect('mongodb://localhost:27017/yelp_camp');
+mongoose.connect('mongodb://localhost:27017/yelp_ski');
 
 app.use(bodyParser.urlencoded({extended: true}));
 // This makes it so we don't have to pass "file.ejs" to
@@ -63,17 +63,18 @@ app.post("/skiareas", function(req, res) {
 // SHOW route - must be after /new or this will ignore /new and 
 // go here. Use id because it's unique.
 app.get("/skiareas/:id", function(req, res) {
-    Skiarea.findById(
-        req.params.id, 
-        function(error, foundSkiarea) {
-            if (error) {
-                console.log(error);
-            } else {
-                res.render("show", {skiarea: foundSkiarea});
+    Skiarea.findById(req.params.id).populate("comments").exec(
+        function(err, skiarea) {
+            if (err) {
+                console.log(err);
+                res.redirect("/skiareas");
+                return;
             }
+            console.log(skiarea);
+            res.render("show", {skiarea: skiarea});
         });
-})
+});
 
 app.listen(3000, function() {
-    console.log("YelpCamp server started.");
+    console.log("YelpSki server started.");
 });
