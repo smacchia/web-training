@@ -70,7 +70,7 @@ app.get("/skiareas/:id", function(req, res) {
                 res.redirect("/skiareas");
                 return;
             }
-            console.log(skiarea);
+            console.log(skiarea.name);
             res.render("show", {skiarea: skiarea});
         });
 });

@@ -153,6 +153,13 @@ JQUERY
 
 BACK-END
 ========
+To RUN:
+    cd where app.js is
+    $ node app.js
+
+    in browser
+    http://localhost:3000
+
 Node js console
     way to look at the javascript; no UI for this.
 

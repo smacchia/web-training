@@ -35,13 +35,25 @@ function seedDB() {
                 if (err) {
                     console.log(err);
                 } else {
-                    console.log("Added a ski area");
-                    // create a comment
-                    Comment.create(
-                        {
-                            text: "This place is great! POW POW!",
+                    console.log("Added a ski area " + skiarea.name);
+                    // create a comment, init to default
+                    commentData = {
+                        text: "This place is great! POW POW!",
+                        author: "Bob"
+                    }
+                    if (skiarea.name == "Loon Mt.") {
+                        commentData = {
+                            text: "Lots of varied terrain. Good snow making. Lots of fun!",
+                            author: "Tony"
+                        }
+                    } else if (skiarea.name == "Bretton Woods Ski Resort") {
+                        commentData = {
+                            text:  "Best snow in New Hampshire!",
                             author: "Susan"
-                        },
+                        }
+                    }
+                    Comment.create(
+                        commentData,
                         function(err, comment) {
                             if (err) {
                                 console.log(err);
